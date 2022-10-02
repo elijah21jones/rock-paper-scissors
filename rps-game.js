@@ -8,6 +8,17 @@ switch (randomNum) {
     case 2:
         return "Scissors";
 }
-getComputerChoice(2);
-console.log(2);
+}
+console.log(getComputerChoice());
+
+function playRound(playerSelection, computerSelection) {
+
+     playerSelection = prompt("To play game, select either Rock, Paper, or Scissors").toLowerCase();
+
+    if (playerSelection == "Rock" && computerSelection == "Scissors"){
+        return "You win!";
+     } else if (playerSelection == "Rock" && computerSelection == "Paper") {
+        return "You lose";
+     } else if 
+     }
 }
