@@ -75,7 +75,8 @@ function game() {
     //call playRound function
     console.log(playRound(playerSelection, computerSelection));
     }
-
+    console.log("Game over")
+    //log score
     if (playerScore > compScore) {
         console.log("Player wins!")
     }
