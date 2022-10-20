@@ -1,6 +1,5 @@
 //choices array
 const choices = ["rock", "paper", "scissors"];
-//set scores to 0
 let playerScore = 0;
 let compScore = 0;
 
@@ -22,30 +21,22 @@ function getComputerChoice() {
  //single round gameplay
 function playRound(playerSelection, computerSelection) {
   if (playerSelection == "rock" && computerSelection == "scissors") {
-        //Add 1 to playerScore
-        playerScore+= 1
-        console.log(playerScore, compScore);
+        playerScore+=1
          return "You win! Rock beats scissors";
      } else if (playerSelection == "rock" && computerSelection == "paper") {
-        //Add 1 to compScore
-        compScore+= 1
-        console.log(playerScore, compScore);
+        compScore+=1
          return "You lose. Paper beats rock";
      } else if (playerSelection == "scissors" && computerSelection == "paper") {
-        playerScore+= 1
-        console.log(playerScore, compScore);
+        playerScore+=1
          return "You win! Scissors beat paper";
      } else if (playerSelection == "scissors" && computerSelection == "rock") {
-        compScore+= 1
-        console.log(playerScore, compScore);
+        compScore+=1
          return "You lose. Rock beats scissors";
      } else if (playerSelection == "paper" && computerSelection == "rock") {
-        playerScore+= 1
-        console.log(playerScore, compScore);
+        playerScore+=1
          return "You win! Paper beats rock";
      } else if (playerSelection == "paper" && computerSelection == "scissors") {
-        compScore+= 1
-        console.log(playerScore, compScore);
+        compScore+=1
          return "You lose. Scissors beat paper";
      } else if (playerSelection ===  computerSelection) {
          return "It's a tie";
@@ -80,9 +71,19 @@ function game() {
     for (let i = 0; i < 5; i++) {
         const playerSelection = userInput();
         const computerSelection = getComputerChoice();
-        //call playRound function
-        console.log(playRound(playerSelection, computerSelection));
 
+    //call playRound function
+    console.log(playRound(playerSelection, computerSelection));
+    }
+
+    if (playerScore > compScore) {
+        console.log("Player wins!")
+    }
+    else if (playerScore < compScore) {
+        console.log("Computer wins!")
+    }
+    else {
+        console.log("It's a tie!")
     }
 }
 game()
